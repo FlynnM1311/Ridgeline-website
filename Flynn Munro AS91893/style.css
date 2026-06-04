@@ -1,0 +1,52 @@
+/*Importing fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Jim+Nightshade&family=Special+Elite&family=Elsie+Sans+SC:wght@400;900&family=Outfit:wght@300;400;500;600&display=swap');
+
+/*Found root in mockup code researched it and found out that it much easier to use than using the*/
+:root{
+    --bark:#825D41;
+    --deep:#2E413D;
+    --sage:#4F574A;
+    --cream:#F2EDE4;
+    --bone:#D9CDB8;
+    --char:#1A1A16;
+    --blaze:#C8521A;
+    --space:8px;
+}
+
+.container {
+    display: grid;
+}
+/* Created the site backgrounds and essentially the template */
+.site{
+    background:var(--char);
+    color:var(--cream);
+    font-family:'Outfit',sans-serif;
+    font-size:14px;
+    line-height:1.6;
+    width:100%;
+}
+/*Here I am creating my navigation bars and its content*/
+.nav{
+    background-color: var(--cream);
+    border-bottom:1px solid #232323 ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.logo-text{
+    font-family: 'Jim Nightshade' cursive;
+    font-size: 24px;
+    letter-spacing: 1.2px;
+    line-height: 1;
+    color: var(--cream);
+}
+
+.logo-mark{
+    
+}
