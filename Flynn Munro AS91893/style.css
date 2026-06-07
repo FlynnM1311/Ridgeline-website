@@ -1,7 +1,7 @@
 /*Importing fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Jim+Nightshade&family=Special+Elite&family=Elsie+Sans+SC:wght@400;900&family=Outfit:wght@300;400;500;600&display=swap');
 
-/*Found root in mockup code researched it and found out that it much easier to use than using the*/
+/*Found root in mockup code researched it and found out that it much easier to use than using the hex codes*/
 :root{
     --bark:#825D41;
     --deep:#2E413D;
@@ -48,5 +48,5 @@
 }
 
 .logo-mark{
-    
+       
 }
