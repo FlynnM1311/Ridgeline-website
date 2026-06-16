@@ -53,5 +53,16 @@
 .hero{
     background:var(--deep) ;
     background-image: url("C:\Users\flynn.munro.SBHSDOMAIN\OneDrive - Southland Boys' High School\2026 DTC\Flynn Munro AS91893\images\philipp-pilz-iQRKBNKyRpo-unsplash.jpg");
+    background-position: center;
+    background-size: cover;
+    min-height: 480px;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: 1hr 340px;
+    align-items: stretch;
+    overflow:hidden;
+    position:relative;
+}
+.hero-right{
     
 }
