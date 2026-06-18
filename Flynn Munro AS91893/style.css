@@ -1,6 +1,8 @@
 /*Importing fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Jim+Nightshade&family=Special+Elite&family=Elsie+Sans+SC:wght@400;900&family=Outfit:wght@300;400;500;600&display=swap');
 
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+
 /*Found root in mockup code researched it and found out that it much easier to use than using the hex codes*/
 :root{
     --bark:#825D41;
@@ -27,12 +29,13 @@
 }
 /*Here I am creating my navigation bars and its content*/
 .nav{
-    background-color: var(--cream);
-    border-bottom:1px solid #232323 ;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
+    background:var(--char);
+  border-bottom:1px solid rgba(255,255,255,0.08);
+  padding:0 40px;
+  height:60px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 }
 .logo{
     display: flex;
