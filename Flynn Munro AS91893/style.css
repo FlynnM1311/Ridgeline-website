@@ -1,7 +1,9 @@
 /*Importing fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Jim+Nightshade&family=Special+Elite&family=Elsie+Sans+SC:wght@400;900&family=Outfit:wght@300;400;500;600&display=swap');
 
-/*Found root in mockup code researched it and found out that it much easier to use than using the*/
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+
+/*Found root in mockup code researched it and found out that it much easier to use than using the hex codes*/
 :root{
     --bark:#825D41;
     --deep:#2E413D;
@@ -27,12 +29,13 @@
 }
 /*Here I am creating my navigation bars and its content*/
 .nav{
-    background-color: var(--cream);
-    border-bottom:1px solid #232323 ;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
+    background:var(--char);
+  border-bottom:1px solid rgba(255,255,255,0.08);
+  padding:0 40px;
+  height:70px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 }
 .logo{
     display: flex;
@@ -40,13 +43,71 @@
     gap: 12px;
 }
 .logo-text{
-    font-family: 'Jim Nightshade' cursive;
+    font-family: 'Jim Nightshade',cursive;
     font-size: 24px;
     letter-spacing: 1.2px;
     line-height: 1;
     color: var(--cream);
 }
-
+.logo-sh{
+    font-family: 'outfit',sans-serif;
+    font-weight: 300;
+    font-size: 10px;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color:var(--bark);
+    display:block;
+    margin-top:1px;
+}
 .logo-mark{
-    
+      width:70px;
+      height:70px;
+      flex-shrink: 0; 
+}
+/*Hero image*/
+.hero{
+    background:var(--deep) ;
+    background-image: url("C:\Users\flynn.munro.SBHSDOMAIN\OneDrive - Southland Boys' High School\2026 DTC\Flynn Munro AS91893\images\philipp-pilz-iQRKBNKyRpo-unsplash.jpg");
+    background-position: center;
+    background-size: cover;
+    min-height: 480px;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: 1hr 340px;
+    align-items: stretch;
+    overflow:hidden;
+    position:relative;
+}
+
+.nav-link{
+    display:flex;
+    gap:24px;
+    list-style: none;
+    align-items: center;
+}
+.nav-link a{
+    font-family: 'outfit',sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color:#D9CDB8;
+    display:block;
+    margin-top:1px;
+}
+.nav-link a:hover{
+    color:var(--bark);
+}
+.nav-button{
+  background:var(--blaze);
+  color:var(--cream);
+  font-family:'Outfit',sans-serif;
+  font-weight:600;
+  font-size:12px;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  padding:9px 20px;
+  border:none;
+  cursor:pointer;
+  white-space:nowrap;
 }
