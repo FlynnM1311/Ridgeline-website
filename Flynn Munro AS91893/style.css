@@ -55,7 +55,7 @@
     font-size: 10px;
     letter-spacing: .3em;
     text-transform: uppercase;
-    color:var(--bark);
+    color:var(--cream);
     display:block;
     margin-top:1px;
 }
@@ -118,4 +118,11 @@
   inset:0;
   background:linear-gradient(90deg, rgba(46,65,61,.88) 0%, rgba(46,65,61,.72) 45%, rgba(26,26,22,.85) 100%);
   pointer-events:none;
+}
+.hero > *{
+  position:relative;
+  z-index:1;
+}
+.hero-left{
+    
 }
