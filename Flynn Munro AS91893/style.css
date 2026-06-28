@@ -99,30 +99,64 @@
     color:var(--bark);
 }
 .nav-button{
-  background:var(--blaze);
-  color:var(--cream);
-  font-family:'Outfit',sans-serif;
-  font-weight:600;
-  font-size:12px;
-  letter-spacing:.2em;
-  text-transform:uppercase;
-  padding:9px 20px;
-  border:none;
-  cursor:pointer;
-  white-space:nowrap;
+    background:var(--blaze);
+    color:var(--cream);
+    font-family:'Outfit',sans-serif;
+    font-weight:600;
+    font-size:12px;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    padding:9px 20px;
+    border:none;
+    cursor:pointer;
+    white-space:nowrap;
 }
 /* Hero Gradient */
 .hero::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(90deg, rgba(46,65,61,.88) 0%, rgba(46,65,61,.72) 45%, rgba(26,26,22,.85) 100%);
-  pointer-events:none;
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(90deg, rgba(46,65,61,.88) 0%, rgba(46,65,61,.72) 45%, rgba(26,26,22,.85) 100%);
+    pointer-events:none;
 }
 .hero > *{
-  position:relative;
-  z-index:1;
+    position:relative;
+    z-index:1;
 }
 .hero-left{
-    
+    padding-top: 64px;
+    padding-right:64px;
+    padding-bottom: 64px;
+    padding-left:64px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;  
+    border-right:1px solid rgba(255,255,255,0.06);
+}
+.hero-top{
+    font-family:'Outfit',sans-serif;
+    font-weight:500;
+    font-size:10px;
+    letter-spacing:.42em;
+    text-transform:uppercase;
+    color:var(--bark);
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:20px;
+}
+.hero-top::before{
+    content:'';
+    width:28px;
+    height:1px;
+    background:var(--bark);
+    flex-shrink:0;
+}
+.hero-title{
+    font-family:'Jim Nightshade',cursive;
+    font-size:80px;
+    line-height:.9;
+    color:var(--cream);
+    margin-bottom:24px;
+    letter-spacing:.02em;
 }
