@@ -3,7 +3,7 @@
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 
-/*Found root in mockup code researched it and found out that it much easier to use than using the hex codes*/
+/*Found root in mockup code researched it and found out that it much easier to use than using the hex codes Am obligated to say this snippet of code came from AI*/
 :root{
     --bark:#825D41;
     --deep:#2E413D;
@@ -30,12 +30,15 @@
 /*Here I am creating my navigation bars and its content*/
 .nav{
     background:var(--char);
-  border-bottom:1px solid rgba(255,255,255,0.08);
-  padding:0 40px;
-  height:70px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 40px;
+    padding-right: 40px;
+    height:70px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
 .logo{
     display: flex;
@@ -159,4 +162,17 @@
     color:var(--cream);
     margin-bottom:24px;
     letter-spacing:.02em;
+}
+.hero-title em{
+    color:var(--cream);
+    font-style:normal;
+}
+.hero-body{
+    font-family:'Outfit',sans-serif;
+    font-weight:300;
+    font-size:14px;
+    line-height:1.9;
+    color:var(--bone);
+    max-width:420px;
+    margin-bottom:36px;
 }
