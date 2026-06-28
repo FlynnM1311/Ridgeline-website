@@ -176,3 +176,12 @@
     max-width:420px;
     margin-bottom:36px;
 }
+.hero-button{
+    font-family:'Outfit',sans-serif;
+    font-weight:300;
+    font-size:14px;
+    line-height:1.9;
+    color:var(--bone);
+    max-width:420px;
+    margin-bottom:36px;
+}
