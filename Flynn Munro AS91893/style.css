@@ -67,10 +67,10 @@
       height:70px;
       flex-shrink: 0; 
 }
-/*Hero image*/
+/*Hero image This code is adapted from the W3schools hero section*/
 .hero{
     background:var(--deep) ;
-    background-image: url("C:\Users\flynn.munro.SBHSDOMAIN\OneDrive - Southland Boys' High School\2026 DTC\Flynn Munro AS91893\images\philipp-pilz-iQRKBNKyRpo-unsplash.jpg");
+    background-image: url("https://raw.githubusercontent.com/FlynnM1311/Ridgeline-website/ff7f5de4f323ab660531cf85c228db37d312487c/Flynn%20Munro%20AS91893/philipp-pilz-iQRKBNKyRpo-unsplash.jpg");
     background-position: center;
     background-size: cover;
     min-height: 480px;
@@ -142,7 +142,7 @@
     font-size:10px;
     letter-spacing:.42em;
     text-transform:uppercase;
-    color:var(--bark);
+    color:var(--cream);
     display:flex;
     align-items:center;
     gap:10px;
@@ -152,14 +152,14 @@
     content:'';
     width:28px;
     height:1px;
-    background:var(--bark);
+    background:var(--cream);
     flex-shrink:0;
 }
 .hero-title{
     font-family:'Jim Nightshade',cursive;
     font-size:80px;
     line-height:.9;
-    color:var(--cream);
+    color:var(--bone);
     margin-bottom:24px;
     letter-spacing:.02em;
 }
@@ -184,4 +184,7 @@
     color:var(--bone);
     max-width:420px;
     margin-bottom:36px;
+}
+.hero-button-main{
+    
 }
