@@ -1,9 +1,10 @@
 /*Importing fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Jim+Nightshade&family=Special+Elite&family=Elsie+Sans+SC:wght@400;900&family=Outfit:wght@300;400;500;600&display=swap');
 
+/* Snippet from AI for reset margins*/
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 
-/*Found root in mockup code researched it and found out that it much easier to use than using the hex codes Am obligated to say this snippet of code came from AI*/
+/* Theme variables (colors) for easier maintenance */
 :root{
     --bark:#825D41;
     --deep:#2E413D;
@@ -15,30 +16,33 @@
     --space:8px;
 }
 
+/* Wrapper layout (used if your HTML has .container) */
 .container {
     display: grid;
 }
-/* Created the site backgrounds and essentially the template */
+
+/* Site-wide base styling */
 .site{
-    background:var(--char);
-    color:var(--cream);
+    background:var(--char); /* dark background */
+    color:var(--cream); /* default text color */
     font-family:'Outfit',sans-serif;
     font-size:14px;
     line-height:1.6;
     width:100%;
 }
-/*Here I am creating my navigation bars and its content*/
+
+/* Top navigation bar */
 .nav{
     background:var(--char);
     border-bottom:1px solid rgba(255,255,255,0.08);
     padding-top: 0px;
     padding-bottom: 0px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 40px; /* left gutter */
+    padding-right: 40px; /* right gutter */
     height:70px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
+    display:flex; /* enables horizontal layout */
+    align-items:center; /* vertically center items */
+    justify-content:space-between; /* space between logo and links */
 }
 .logo{
     display: flex;
@@ -46,12 +50,14 @@
     gap: 12px;
 }
 .logo-text{
-    font-family: 'Jim Nightshade',cursive;
+    font-family: 'Jim Nightshade',cursive; /* display font */
     font-size: 24px;
-    letter-spacing: 1.2px;
+    letter-spacing: 1.2px; /* tracking */
     line-height: 1;
     color: var(--cream);
 }
+
+/* Small subtitle under the logo (uppercase) */
 .logo-sh{
     font-family: 'outfit',sans-serif;
     font-weight: 300;
@@ -62,111 +68,138 @@
     display:block;
     margin-top:1px;
 }
+
+/* Logo mark image size */
 .logo-mark{
       width:70px;
       height:70px;
-      flex-shrink: 0; 
+      flex-shrink: 0; /* prevent shrinking inside flex */
 }
-/*Hero image This code is adapted from the W3schools hero section*/
+/* Hero section (image background + two-column layout)
+   Note: the overall approach was adapted from a W3Schools-style hero pattern. */
 .hero{
-    background:var(--deep) ;
+    background:var(--deep); /* fallback background */
     background-image: url("https://raw.githubusercontent.com/FlynnM1311/Ridgeline-website/ff7f5de4f323ab660531cf85c228db37d312487c/Flynn%20Munro%20AS91893/philipp-pilz-iQRKBNKyRpo-unsplash.jpg");
-    background-position: center;
-    background-size: cover;
-    min-height: 480px;
-    background-repeat: no-repeat;
-    display: grid;
-    grid-template-columns: 1hr 340px;
-    align-items: stretch;
-    overflow:hidden;
-    position:relative;
+    background-position: center; /* center crop */
+    background-size: cover; /* fill without distortion */
+    min-height: 480px; /* hero height */
+    display: grid; /* enables layout inside hero */
+    grid-template-columns: 1hr 340px; /* left flexible, right fixed */
+    align-items: stretch; /* right column stretches to full height */
+    overflow:hidden; /* hide gradient/pseudo overflow */
+    position:relative; /* positioning context for ::before gradient */
 }
 
+/* Navigation links container */
 .nav-link{
-    display:flex;
-    gap:24px;
-    list-style: none;
-    align-items: center;
+    display:flex; /* horizontal list */
+    gap:24px; /* spacing between links */
+    list-style: none; /* remove bullets */
+    align-items: center; /* vertical centering */
 }
 .nav-link a{
-    font-family: 'outfit',sans-serif;
-    font-weight: 500;
+    font-family: 'outfit',sans-serif; /* menu font */
+    font-weight: 500; /* medium weight */
     font-size: 12px;
-    letter-spacing: .12em;
+    letter-spacing: .12em; /* tracking */
     text-transform: uppercase;
-    color:#D9CDB8;
-    display:block;
-    margin-top:1px;
+    color:#D9CDB8; /* default menu color */
+    display:block; /* easier spacing/hover hit area */
+    margin-top:1px; /* tiny vertical alignment tweak */
 }
+
+/* Hover state for nav links */
 .nav-link a:hover{
     color:var(--bark);
 }
+
+/* Primary nav button in the nav */
 .nav-button{
-    background:var(--blaze);
-    color:var(--cream);
+    background:var(--blaze); /* accent color */
+    color:var(--cream); /* readable text */
+
     font-family:'Outfit',sans-serif;
     font-weight:600;
     font-size:12px;
     letter-spacing:.2em;
     text-transform:uppercase;
-    padding:9px 20px;
+
+    padding:9px 20px; /* button size */
     border:none;
     cursor:pointer;
-    white-space:nowrap;
+    white-space:nowrap; /* prevent wrapping */
 }
-/* Hero Gradient */
+
+/* Hero Gradient overlay */
 .hero::before{
-    content:"";
-    position:absolute;
+    content:""; /* create pseudo element */
+    position:absolute; /* covers entire hero */
     inset:0;
+
+    /* left-to-right dark gradient improves contrast */
     background:linear-gradient(90deg, rgba(46,65,61,.88) 0%, rgba(46,65,61,.72) 45%, rgba(26,26,22,.85) 100%);
-    pointer-events:none;
+
+    pointer-events:none; /* allow clicks to pass through because if i didnt have it to click the button it would be as if ytou were clicking on just the image */
 }
 .hero > *{
     position:relative;
     z-index:1;
 }
 .hero-left{
-    padding-top: 64px;
-    padding-right:64px;
-    padding-bottom: 64px;
-    padding-left:64px;
-    display:flex;
+    padding-top: 64px; /* inner top spacing */
+    padding-right:64px; /* inner right spacing */
+    padding-bottom: 64px; /* inner bottom spacing */
+    padding-left:64px; /* inner left spacing */
+
+    display:flex; /* stack content vertically */
     flex-direction:column;
-    justify-content:center;  
-    border-right:1px solid rgba(255,255,255,0.06);
+    justify-content:center; /* vertically center within hero */
+
+    border-right:1px solid rgba(255,255,255,0.06); /* subtle divider */
 }
+
+/* Small label above the hero title */
 .hero-top{
     font-family:'Outfit',sans-serif;
     font-weight:500;
     font-size:10px;
-    letter-spacing:.42em;
+    letter-spacing:.42em; /* wide tracking */
     text-transform:uppercase;
     color:var(--cream);
+
     display:flex;
     align-items:center;
-    gap:10px;
+    gap:10px; /* space between line and text */
+
     margin-bottom:20px;
 }
+
+/* Decorative line before the hero-top text */
 .hero-top::before{
     content:'';
     width:28px;
     height:1px;
     background:var(--cream);
-    flex-shrink:0;
+    flex-shrink:0; /* keep the line from shrinking */
 }
+
+/* Main headline */
 .hero-title{
     font-family:'Jim Nightshade',cursive;
     font-size:80px;
-    line-height:.9;
+    line-height:.9; /* tight lines */
     color:var(--bone);
     margin-bottom:24px;
     letter-spacing:.02em;
 }
+
+/* The emphasized word in the headline */
 .hero-title em{
     color:var(--cream);
-    font-style:normal;
+    font-style:normal; /* remove default italic */
 }
+
+/* Optional descriptive text styling  */
 .hero-body{
     font-family:'Outfit',sans-serif;
     font-weight:300;
@@ -176,6 +209,8 @@
     max-width:420px;
     margin-bottom:36px;
 }
+
+/* button  */
 .hero-button{
     font-family:'Outfit',sans-serif;
     font-weight:300;
@@ -185,18 +220,16 @@
     max-width:420px;
     margin-bottom:36px;
 }
-/*This code was partially made from AI*/
+/*button (partially adapted from AI) */
 .hero-button-main{
-    /*this  makes the background colour*/
-    background:var(--bark);
-    /*this is the */
-    color:var(--char);
+    background:var(--bark); /* button background */
+    color:var(--char); /* text color */
     font-family:'Outfit',sans-serif;
     font-weight:600;
     font-size:11px;
-    letter-spacing:.2em;
+    letter-spacing:.2em; /* uppercase tracking */
     text-transform:uppercase;
-    padding:13px 28px;
+    padding:13px 28px; /* size */
     border:none;
-    cursor:pointer;
+    cursor:pointer; /* clickable */
 }
