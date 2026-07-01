@@ -189,6 +189,7 @@
 .hero-button-main{
     /*this  makes the background colour*/
     background:var(--bark);
+    /*this is the */
     color:var(--char);
     font-family:'Outfit',sans-serif;
     font-weight:600;
